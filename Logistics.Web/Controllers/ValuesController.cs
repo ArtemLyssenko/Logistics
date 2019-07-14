@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Logistics.Web.Controllers
@@ -12,9 +9,9 @@ namespace Logistics.Web.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return RuntimeInformation.OSDescription;
         }
 
         // GET api/values/5
